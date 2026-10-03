@@ -10,7 +10,7 @@ Turn VIOFO A329S 3-channel dashcam footage (front, rear, interior) into cycling-
 
 It ships as a [Claude Code](https://docs.claude.com/en/docs/claude-code) skill (`SKILL.md`), but the script is a plain Python CLI and works on its own.
 
-## Features
+## ✨ Features
 
 - **Ingest** selected days (and an optional time window) from the camera, a microSD card, or a folder, including locked clips in `RO/`. Parking-mode clips are skipped by default.
 - **Channel grouping** that handles A329S firmware, which numbers each channel's file separately and can start one channel 1–3 s after the others.
@@ -20,7 +20,7 @@ It ships as a [Claude Code](https://docs.claude.com/en/docs/claude-code) skill (
 - **FIT to GPX** conversion for Garmin and Wahoo rides.
 - Standard library only. No Python dependencies beyond the optional `fitdecode`.
 
-## Requirements
+## 📋 Requirements
 
 - Python 3.9+
 - [exiftool](https://exiftool.org/) and ffprobe (from [ffmpeg](https://ffmpeg.org/)) on `PATH`
@@ -34,7 +34,7 @@ brew install exiftool ffmpeg
 pip3 install fitdecode
 ```
 
-## Install as a Claude Code skill
+## 🚀 Install as a Claude Code skill
 
 ```bash
 git clone https://github.com/abunur/viofo-broll.git ~/.claude/skills/viofo-broll
@@ -42,7 +42,7 @@ git clone https://github.com/abunur/viofo-broll.git ~/.claude/skills/viofo-broll
 
 Then ask Claude Code something like "pull my VIOFO footage from Saturday and find B-roll that matches my ride." The skill walks through the steps below.
 
-## Usage
+## 📖 Usage
 
 ```bash
 python3 scripts/viofo_broll.py -h
@@ -84,7 +84,7 @@ python3 scripts/viofo_broll.py -h
    python3 scripts/viofo_broll.py fcpxml ./dashcam/2026-09-12 --matches ./dashcam/2026-09-12/matches.json --out ./dashcam/dashcam-2026-09-12.fcpxml --handles 2
    ```
 
-## Outputs
+## 📦 Outputs
 
 | File | Contents |
 | --- | --- |
@@ -95,7 +95,7 @@ python3 scripts/viofo_broll.py -h
 | `matches.geojson` | Ride tracks plus highlighted car stretches for map overlays |
 | `*.fcpxml` | Final Cut Pro library with multicam clips and timelines |
 
-## Notes
+## 📝 Notes
 
 - **Extract GPS before editing.** Trimming, merging or transcoding clips (ffmpeg, LosslessCut, MKVToolNix) strips the embedded GPS.
 - **Media is referenced in place** by absolute `file://` path. Keep the footage where it is, or relink in Final Cut.
@@ -104,6 +104,6 @@ python3 scripts/viofo_broll.py -h
 - **Turn off the camera's on-screen GPS and speed stamps** for cleaner B-roll.
 - Tested against the VIOFO A329S 3CH. Other VIOFO models that use the same `YYYY_MMDD_HHMMSS_NNN[P]{F|R|I}.MP4` naming should work but are untested.
 
-## License
+## 📄 License
 
 [MIT](LICENSE)
