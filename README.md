@@ -1,5 +1,11 @@
 # viofo-broll
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)
+![Python](https://img.shields.io/badge/python-3.9%2B-green.svg)
+![Final Cut Pro](https://img.shields.io/badge/Final%20Cut%20Pro-FCPXML%201.10-purple.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+
 Turn VIOFO A329S 3-channel dashcam footage (front, rear, interior) into cycling-video B-roll. The tool extracts the GPS embedded in each clip, finds the stretches where the car drove the same roads as your ride tracks (GPX/FIT), and builds a Final Cut Pro FCPXML library with one multicam clip per moment plus a "B-roll matches" timeline. It also writes GeoJSON for map overlays.
 
 It ships as a [Claude Code](https://docs.claude.com/en/docs/claude-code) skill (`SKILL.md`), but the script is a plain Python CLI and works on its own.
